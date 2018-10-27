@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <h3 class="titleicon" style="display:inline-block">Google Vision API</h3>
+    <ion-buttons end>
+      <button (click)="logout()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<style>
+  .bg{
+    background-color: azure;
+  }
+</style>
+<ion-content padding class="bg">
+  <button  ion-button color="tertiary" (click)="Capture()">Take Picture</button>
+  <div *ngIf="base64Image">
+    <br/>
+    <strong align="center">Picture Taken</strong>
+    <img [src]="base64Image" />
+    <br/><br/>
+    <p *ngIf="visionResult">Text from the Image is : <strong> {{visionResult}}</strong></p>
+  </div>
+
+
+</ion-content>
