@@ -6,7 +6,7 @@ var express = require('express');
 var path = require("path");
 const Clarifai = require('clarifai');
 var app = express();
-var url = 'mongodb://siri:siri123@ds147599.mlab.com:47599/labdatabase';
+var url = 'mongodb://bhargavi:bhargavi1411@ds147599.mlab.com:47599/labdatabase';
 const clarifiaApp = new Clarifai.App({apiKey: '2c44c27307bd4e778887f89862bf6b0a'});
 
 app.use(bodyParser.json());
